@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="custom.css" rel="stylesheet"/>
+    <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet"/>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.js"
+            integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+</head>
+<body>
+<div id="buttons">
+    <button id="buy">Заказать</button>
+    <button id="add">Добавить</button>
+</div>
+<div id="new_item" class="hidden">
+    <label>
+        Name
+        <input id="name" type="text"/>
+    </label>
+    <label>
+        Price
+        <input type="number" id="price"/>
+    </label>
+    <label>
+        Quantity
+        <input type="number" id="quantity"/>
+    </label>
+    <button id="submit">Submit</button>
+</div>
+<div id="buy_order" class="hidden">
+    <label>
+        Email
+        <input id="email" type="email" value="connormclaud@gmail.com">
+    </label>
+    <label>
+        Quantity
+        <input id="buy_quantity" type="number">
+    </label>
+    <button id="buy_submit">
+        Купить!
+    </button>
+</div>
+<table id="prices" class="sortable">
+    <thead>
+    <tr>
+        <th>
+            Id
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Price
+        </th>
+        <th>
+            Quantity
+        </th>
+    </tr>
+    </thead>
+</table>
+<script src="custom.js"></script>
+</body>
+</html>
