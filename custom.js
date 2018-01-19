@@ -114,9 +114,9 @@ buttons.find('#add').on('click', function (e) {
 
 $('#new_item').find('#submit').on('click', function (e) {
     let new_item = $('#new_item');
-    let name = new_item.find('#name').val()
-    let price = new_item.find('#price').val()
-    let quantity = new_item.find('#quantity').val()
+    let name = new_item.find('#name').val();
+    let price = new_item.find('#price').val();
+    let quantity = new_item.find('#quantity').val();
     $.ajax({
         crossDomain: true,
         url: "http://127.0.0.1:3000/item",
@@ -152,7 +152,7 @@ function select_row(selector) {
 function make_richtable() {
     let table = $('#prices');
     document.table = table.DataTable();
-    table.find("tbody tr").click(function () {
+    table.find('tbody').on('click', 'tr', function () {
         select_row(this);
     });
 }
